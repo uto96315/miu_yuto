@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 // ユーザー情報（仮のデータ）
 const userData = [
-    { name: ["みう", "みうちゃん", "海羽", "飯野海羽", "miu"], pass: "miu_san" },
+    { name: ["みう", "みうちゃん", "海羽", "飯野海羽", "miu"], pass: "miu" },
     { name: ["yuto", "ゆうと", "雄斗"], pass: "ymabe315" },
 ];
 
