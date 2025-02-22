@@ -4,6 +4,7 @@ import { Counter } from "../parts/counter";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { handleLogout } from "../auth_controller";
 
 export default function HomePage() {
     // ターゲットの日付を設定（例: 2025/3/13 15:00:00）
@@ -38,7 +39,7 @@ export default function HomePage() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-[url('/bg.png')] bg-contain bg-opacity-50">
-            <div className=" absolute top-0">
+            <div className=" absolute top-0" onClick={() => handleLogout()}>
                 <Counter timeLeft={timeLeft} />
             </div>
 

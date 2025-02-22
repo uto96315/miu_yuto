@@ -6,7 +6,7 @@ export const Counter = (prop: { timeLeft: { days: number, hours: number, minutes
                 <h1>次に会えるまであと</h1>
                 <div className="flex items-center space-x-4">
                     <TimeSpan text={`${prop.timeLeft.days}`} unit="日" />
-                    <TimeSpan text={`${prop.timeLeft.hours}`} unit="時" />
+                    <TimeSpan text={`${prop.timeLeft.hours}`} unit="時間" />
                     <TimeSpan text={`${prop.timeLeft.minutes}`} unit="分" />
                     <TimeSpan text={`${prop.timeLeft.seconds}`} unit="秒" />
                 </div>
