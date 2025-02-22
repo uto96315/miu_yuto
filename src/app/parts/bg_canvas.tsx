@@ -26,8 +26,8 @@ export const BgCanvas = () => {
         const characters = Array.from({ length: 2 }).map(() => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            speedX: (Math.random() - 0.5) * 2,
-            speedY: (Math.random() - 0.5) * 2,
+            speedX: (Math.random() - 0.5) * 4,
+            speedY: (Math.random() - 0.5) * 4,
             image: new Image(),
             showHeart: false, // ハート表示フラグ
             heartTimer: 0, // ハートの表示時間
