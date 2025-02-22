@@ -5,30 +5,6 @@ import { useRouter, usePathname } from "next/navigation";
 import { checkAuth } from "@/lib/auth";
 import localFont from 'next/font/local';
 
-export const metadata = {
-  title: "みうゆとアプリ",
-  description: "寂しさが少しでも和らげば！",
-  openGraph: {
-    title: "みうゆとアプリ",
-    description: "寂しさが少しでも和らげば！",
-    url: "https://x.gd/rIpu5",
-    images: [
-      {
-        url: "https://your-vercel-url.com/slick/01.jpeg", // 絶対URLにする
-        width: 800,
-        height: 600,
-        alt: "みうゆとアプリのOG画像",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "みうゆとアプリ",
-    description: "寂しさが少しでも和らげば！",
-    images: ["https://your-vercel-url.com/slick/01.jpeg"],
-  },
-};
-
 
 // ローカルフォントの設定
 const pixelMplus = localFont({
@@ -54,13 +30,19 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
 
   useEffect(() => {
-    if (!isLoggedIn && pathname !== "/login") {
-      router.push("/login"); // 未ログインならログイン画面へ
-    }
-    if (isLoggedIn && pathname === "/login") {
-      router.push("/home"); // ログイン済みならホームへ
+    const botAgents = ["Twitterbot", "facebookexternalhit", "LinkedInBot", "Slackbot", "WhatsApp"];
+    const isBot = botAgents.some((bot) => navigator.userAgent.includes(bot));
+
+    if (!isBot) {
+      if (!isLoggedIn && pathname !== "/login") {
+        router.push("/login");
+      }
+      if (isLoggedIn && pathname === "/login") {
+        router.push("/home");
+      }
     }
   }, [isLoggedIn, pathname, router]);
+
 
   return (
     <html lang="ja">
