@@ -65,7 +65,10 @@ const SlickImages = () => {
         slidesToScroll: 1,
     };
 
-    const images = ["/slick/01.jpeg", "/slick/02.jpeg", "/slick/03.JPG", "/slick/04.JPG", "/slick/05.JPG", "/slick/06.JPG"];
+    const images = ["/slick/01.jpeg", "/slick/02.jpeg",
+        // "/slick/03.JPG", "/slick/04.JPG", "/slick/05.JPG", 
+        "/slick/06.JPG"
+    ];
 
     return <div className="w-full max-w-lg mx-auto mt-8">
         <Slider {...sliderSettings}>
