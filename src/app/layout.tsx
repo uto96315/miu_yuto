@@ -64,6 +64,10 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
   return (
     <html lang="ja">
       <head>
+        <title>みうゆとアプリ</title>
+        <meta name="description" content="寂しさが少しでも和らげばと思って作りました！更新していきます！" />
+        <meta property="og:url" content="https://x.gd/rIpu5" />
+        <meta property="og:image" content="/public/slick/01.jpeg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
           rel="stylesheet"
