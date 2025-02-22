@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pixel-art {
+  font-family: 'Press Start 2P', cursive;
+  image-rendering: pixelated;
+  font-weight: bold;
+}
