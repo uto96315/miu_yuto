@@ -43,6 +43,13 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
     }
   }, [isLoggedIn, pathname, router]);
 
+  useEffect(() => {
+    const token = localStorage.getItem("auth");
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
+
 
   return (
     <html lang="ja">
