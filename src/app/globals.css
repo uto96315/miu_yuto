@@ -7,3 +7,23 @@
   image-rendering: pixelated;
   font-weight: bold;
 }
+
+/* slick-theme.css のデフォルトの余白・位置指定をリセット */
+.slick-dots {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  bottom: 0 !important;
+}
+
+.slick-slider {
+  margin-bottom: 0 !important;
+}
+
+.slick-list {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
