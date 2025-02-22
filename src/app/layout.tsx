@@ -5,6 +5,31 @@ import { useRouter, usePathname } from "next/navigation";
 import { checkAuth } from "@/lib/auth";
 import localFont from 'next/font/local';
 
+export const metadata = {
+  title: "みうゆとアプリ",
+  description: "寂しさが少しでも和らげば！",
+  openGraph: {
+    title: "みうゆとアプリ",
+    description: "寂しさが少しでも和らげば！",
+    url: "https://x.gd/rIpu5",
+    images: [
+      {
+        url: "https://your-vercel-url.com/slick/01.jpeg", // 絶対URLにする
+        width: 800,
+        height: 600,
+        alt: "みうゆとアプリのOG画像",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "みうゆとアプリ",
+    description: "寂しさが少しでも和らげば！",
+    images: ["https://your-vercel-url.com/slick/01.jpeg"],
+  },
+};
+
+
 // ローカルフォントの設定
 const pixelMplus = localFont({
   src: [
@@ -27,30 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
   const pathname = usePathname();
   const isLoggedIn = checkAuth();
 
-  const metadata = {
-    title: "みうゆとアプリ",
-    description: "寂しさが少しでも和らげば！",
-    openGraph: {
-      title: "みうゆとアプリ",
-      description: "寂しさが少しでも和らげば！",
-      url: "https://x.gd/rIpu5",
-      images: [
-        {
-          url: "/public/slick/01.jpeg",
-          width: 800,
-          height: 600,
-          alt: "My App OG Image",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "みうゆとアプリ",
-      description: "寂しさが少しでも和らげば！",
-      images: ["/public/slick/01.jpeg"],
-    },
-  };
-
 
   useEffect(() => {
     if (!isLoggedIn && pathname !== "/login") {
@@ -67,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <title>みうゆとアプリ</title>
         <meta name="description" content="寂しさが少しでも和らげばと思って作りました！更新していきます！" />
         <meta property="og:url" content="https://x.gd/rIpu5" />
-        <meta property="og:image" content="/public/slick/01.jpeg" />
+        <meta property="og:image" content="/slick/01.jpeg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
           rel="stylesheet"
