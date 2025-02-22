@@ -28,8 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
   const isLoggedIn = checkAuth();
 
   const metadata = {
-    title: "My App",
-    description: "My cool app",
+    title: "みうゆとアプリ",
+    description: "",
     // Google Fontsのリンクもここに記述するか、Headコンポーネントで追加する
   };
 
