@@ -6,7 +6,7 @@ import { checkAuth } from "@/lib/auth";
 import localFont from 'next/font/local';
 
 // ローカルフォントの設定
-export const pixelMplus = localFont({
+const pixelMplus = localFont({
   src: [
     {
       path: '../fonts/PixelMplus10-Bold.ttf',
