@@ -13,19 +13,19 @@ const dotFont = DotGothic16({
 
 // ローカルフォントの設定
 const pixelMplus = localFont({
-  src: [
-    {
-      path: '../fonts/PixelMplus10-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/PixelMplus10-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-pixel-mplus',
+    src: [
+        {
+            path: '../../fonts/PixelMplus10-Bold.ttf',
+            weight: '700',
+            style: 'normal',
+        },
+        {
+            path: '../../fonts/PixelMplus10-Regular.ttf',
+            weight: '400',
+            style: 'normal',
+        },
+    ],
+    variable: '--font-pixel-mplus',
 });
 
 const press = Press_Start_2P({
