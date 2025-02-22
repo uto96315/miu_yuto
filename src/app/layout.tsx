@@ -29,8 +29,26 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
   const metadata = {
     title: "みうゆとアプリ",
-    description: "",
-    // Google Fontsのリンクもここに記述するか、Headコンポーネントで追加する
+    description: "寂しさが少しでも和らげば！",
+    openGraph: {
+      title: "みうゆとアプリ",
+      description: "寂しさが少しでも和らげば！",
+      url: "https://x.gd/rIpu5",
+      images: [
+        {
+          url: "/public/slick/01.jpeg",
+          width: 800,
+          height: 600,
+          alt: "My App OG Image",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "みうゆとアプリ",
+      description: "寂しさが少しでも和らげば！",
+      images: ["/public/slick/01.jpeg"],
+    },
   };
 
 
