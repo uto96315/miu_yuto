@@ -4,11 +4,28 @@ import { useRouter } from "next/navigation";
 import { handleLogin } from "@/lib/auth";
 import { BgCanvas } from "../parts/bg_canvas";
 import { DotGothic16, Press_Start_2P } from "next/font/google";
-import { pixelMplus } from "../layout";
+import localFont from 'next/font/local';
 
 const dotFont = DotGothic16({
     weight: "400",
     subsets: ["latin", "cyrillic", "latin-ext"],
+});
+
+// ローカルフォントの設定
+const pixelMplus = localFont({
+  src: [
+    {
+      path: '../fonts/PixelMplus10-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/PixelMplus10-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-pixel-mplus',
 });
 
 const press = Press_Start_2P({
