@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { handleLogout } from "../auth_controller";
 
 export default function HomePage() {
-    // ターゲットの日付を設定（例: 2025/3/13 15:00:00）
-    const targetDate = new Date("2025-03-13T15:00:00");
+    // ターゲットの日付を設定
+    const targetDate = new Date("2025-03-07T22:00:00");
 
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
@@ -38,14 +38,27 @@ export default function HomePage() {
 
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-[url('/bg.png')] bg-contain bg-opacity-50">
+        <div className="flex flex-col items-center justify-center min-h-screen p-6">
             <div className=" absolute top-0" onClick={() => handleLogout()}>
                 <Counter timeLeft={timeLeft} />
             </div>
 
-            <div>
-                {/* ここに二人の画像 時間が短くなればなるほど距離が近くなる */}
+            <div className="flex flex-col items-center fixed top-60">
+                {/* 吹き出し */}
+                <div className="relative">
+                    <div className="pixel-bubble pixel-art mb-2">
+                        <p className="text-center">大好き！！</p>
+                    </div>
+                    <div className="bubble-arrow"></div>
+                </div>
+
+                {/* キャラ画像 */}
+                <img src="/men.png" alt="雄斗" className="w-20" />
+
+                {/* 名前 */}
+                <p className="mt-1 font-bold text-lg">雄斗</p>
             </div>
+
 
             <div className="absolute bottom-0 w-full">
                 <SlickImages />
